@@ -157,11 +157,11 @@ export const Chat = () => {
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               className="flex-1 border-0 outline-none text-sm sm:text-base p-2"
             />
-            <FaSmile
+            {/* <FaSmile
               color="#B5B5B5"
               size={24}
               className="cursor-pointer hover:scale-110 transition-transform"
-            />
+            /> */}
             <button
               onClick={sendMessage}
               className="bg-[#0B89FF] p-2 sm:p-3 rounded-lg flex items-center justify-center hover:bg-[#0077e6] transition-colors cursor-pointer"
