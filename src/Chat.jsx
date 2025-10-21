@@ -77,7 +77,7 @@ export const Chat = () => {
     <div className="w-full h-[100dvh] lg:min-h-screen sm:h-[90vh] flex items-center justify-center bg-black p-0 sm:p-4">
       <div className="w-full h-full sm:w-[90%] sm:h-[90vh] md:w-[700px] lg:w-[900px] bg-[#EDF0F6] flex flex-col justify-between rounded-none sm:rounded-2xl shadow-md overflow-hidden">
         {/* Header */}
-        <div className="flex sm:flex-row sm:justify-between sm:items-center gap-3 p-4 border-b border-[#B5B5B5]">
+        <div className="flex sm:flex-row sm:justify-between sm:items-center justify-between items-center gap-3 p-4 border-b border-[#B5B5B5]">
           <h1 className="font-bold text-xl sm:text-2xl text-center sm:text-left">
             Lero Chat
           </h1>
