@@ -5,7 +5,9 @@ import io from "socket.io-client";
 import axios from "axios";
 
 // conecta ao backend
-const socket = io("http://localhost:3000");
+// const socket = io("http://localhost:3000");
+const socket = io("https://lero-chat-api-production.up.railway.app");
+const API_URL = "https://lero-chat-api-production.up.railway.app"
 
 export const Chat = () => {
   const [name, setName] = useState(() => localStorage.getItem("name") || "");
@@ -42,7 +44,7 @@ export const Chat = () => {
       socket.emit("join", name);
 
       axios
-        .get("http://localhost:3000/messages")
+        .get(`${API_URL}/messages`)
         .then((res) => setChat(res.data))
         .catch((err) => console.error(err));
     }
@@ -105,13 +107,13 @@ export const Chat = () => {
                 <span className="text-xs text-gray-600 mb-1">
                   {msg.name === name ? "Você" : msg.name}, {formatTime(msg.createdAt)}
                 </span>
-                <div
-                  className={`max-w-[75%] sm:max-w-[60%] rounded-lg p-3 text-sm sm:text-base ${
-                    msg.name === name ? "bg-[#D0D4E7]" : "bg-[#C8E6C9] text-gray-800"
-                  }`}
-                >
-                  <p>{msg.text}</p>
-                </div>
+               <div
+  className={`max-w-[75%] sm:max-w-[60%] rounded-lg p-3 text-sm sm:text-base break-words ${
+    msg.name === name ? "bg-[#D0D4E7]" : "bg-[#C8E6C9] text-gray-800"
+  }`}
+>
+  <p>{msg.text}</p>
+</div>
               </div>
             );
           })}
