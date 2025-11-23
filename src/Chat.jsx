@@ -6,8 +6,8 @@ import axios from "axios";
 
 // conecta ao backend
 // const socket = io("http://localhost:3000");
-const socket = io("https://lero-chat-api-production.up.railway.app");
-const API_URL = "https://lero-chat-api-production.up.railway.app";
+const socket = io("https://lero-chat-api.onrender.com");
+const API_URL = "https://lero-chat-api.onrender.com";
 
 export const Chat = () => {
   const [name, setName] = useState(() => localStorage.getItem("name") || "");
